@@ -12,7 +12,7 @@ Details for Milestone are available on Canvas (left sidebar, Course Project).
 
 **Please remember to update this section**
 
-{Add your stuff here}
+Weather analysis from 2009 to July 2020 that includes, but is not limited to, avg temp, humidity, dewpoint, etc.
 
 ## Describe your dataset in about 150-200 words
 
