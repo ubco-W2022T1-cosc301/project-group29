@@ -21,7 +21,7 @@ This data was collected from web scrapping EstesParkWeather.net weather station 
 
 **Please remember to update this section**
 
-- Person 1: one sentence about you!
+- Person 1: My name is Larry Gu. I am a 4th-year student in computer science and mathematics.
 - Person 2: My name is Tai-Laun Mark a 4th-year Biology Major with medical school aspirations!
 - Person 3: one sentence about you!
 
