@@ -6,9 +6,8 @@ Details for Milestone are available on Canvas (left sidebar, Course Project).
 
 ## Describe your topic/interest in about 150-200 words
 
-**Please remember to update this section**
-
-{Add your stuff here}
+From the news, articles, and posts on social networks around us, climate change and weather issues seem to be severe and emergent. This kind of message permeates most of our daily lives - school, work, and even chats amount friends. However, it is still elusive when we consider how serious it is, how exactly climate changes are, and how it influences our weather. It seems all of these to us goes to "Is it going to be colder this winter?", "Will there be more wildfires this year?", "Oh, please! It was hot enough last year! Please do not get hotter!" and so on. 
+With this analysis, we want to make these impacts into visual charts and dashboards. With these products, we could better understand our situation, and be more aware and concerned about the influences brought by climate change, how the weather will be if it becomes more severe than now, and how our daily lives could be affected.  
 
 ## Describe your dataset in about 150-200 words
 
@@ -21,7 +20,7 @@ This data was collected from web scrapping EstesParkWeather.net weather station 
 
 - Person 1: My name is Larry Gu. I am a 4th-year student in computer science and mathematics.
 - Person 2: My name is Tai-Laun Mark a 4th-year Biology Major with medical school aspirations!
-- Person 3: one sentence about you!
+- Person 3: My nmae is Chi-Cheng Ip. I am a 3rd-year student in computer science.
 
 ## Images
 
