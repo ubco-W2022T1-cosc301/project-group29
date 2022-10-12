@@ -27,17 +27,12 @@ This data was collected from web scrapping EstesParkWeather.net weather station 
 
 ## Images
 
-**Please remember to update this section and remove the test image!**
-
-{You can use this area for any images you want to include}
-
-<img src ="images/test.png" width="100px">
+<img src ="images/monika-murren-n.jpg" width="1000px">
 
 ## References
 
 **Please remember to update this section**
 
 {Add your credits, acknowledgements, references, or citations **including a link to the data source** here}
-
 https://www.ncei.noaa.gov/access/monitoring/monthly-report/global/200813
 https://www.noaa.gov/news/2020-was-earth-s-2nd-hottest-year-just-behind-2016#:~:text=It's%20official%3A%202020%20ranks%20as,an%20analysis%20by%20NOAA%20scientists.
