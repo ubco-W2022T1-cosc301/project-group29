@@ -1,8 +1,4 @@
-# Group YYY - {Short snappy Title of your project}
-
-**Please remember to update this section**
-
-- Group 029
+# Group 029 - Weather Analysis and Forecasting
 
 ## Milestones
 
