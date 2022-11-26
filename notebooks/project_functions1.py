@@ -1,4 +1,7 @@
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 def update_column(raw_file_path):
     '''
@@ -75,19 +78,61 @@ def load_and_process(raw_file_path):
     Examples
     --------
     >>> load_and_process('../data/raw/climate_data.csv')
-    Date	avg_tem	avg_hum	avg_dew	max_tem	min_tem	max_hum	min_hum	max_hea	Month
-    0	2009-01-01	37.8	35.0	12.7	40.0	34.0	4.0	27.0	40.0	1
-    1	2009-01-02	43.2	32.0	14.7	52.0	37.0	4.0	16.0	52.0	1
-    2	2009-01-03	25.7	60.0	12.7	41.0	6.0	8.0	35.0	41.0	1
-    3	2009-01-04	9.3	67.0	0.1	19.0	-0.0	7.0	35.0	32.0	1
-    4	2009-01-05	23.5	30.0	-5.3	30.0	15.0	5.0	13.0	32.0	1
+    	avg_tem	avg_hum	avg_dew	max_tem	min_tem	max_hum	min_hum	max_hea	Month	date_obj	Year	dep_dew	ran_dew
+0	32.1	49.0	15.2	40.0	22.1	61.0	41.0	40.0	1	2010-01-01	2010	16.9	57.10
+1	32.1	50.0	15.5	39.1	22.0	77.0	39.0	39.1	1	2010-01-02	2010	16.6	62.78
+2	23.1	64.0	12.1	33.4	9.2	85.0	34.0	33.4	1	2010-01-03	2010	11.0	74.56
+3	25.7	48.0	7.2	36.5	7.6	82.0	25.0	36.5	1	2010-01-04	2010	18.5	81.42
+4	34.3	51.0	17.8	40.1	28.4	60.0	43.0	40.1	1	2010-01-05	2010	16.5	49.82
     '''
-    df = update_column(raw_file_path)
 
-    df_clean = (df.copy()
-          .drop(['rfm','rfy', 'Date1','avg_bar','avg_win','avg_gus','avg_dir','max_rai','max_pre','min_pre','max_win','dif_p','max_gus'], axis=1)
-          .dropna(axis=0)
-         )
-    
-    df_clean['Date'] = df_clean.apply(lambda x: pd.to_datetime(x.Date).date(), axis=1)
+    df = update_column(raw_file_path)
+    df['date_obj']=df.apply(lambda x: pd.to_datetime(x.Date).date(), axis=1)
+    df['Year']=df.apply(lambda x: x.date_obj.year, axis=1)
+    df['dep_dew']=df.apply(lambda x: x.avg_tem-x.avg_dew, axis=1)
+    df['ran_dew']=df.apply(lambda x: (((x.max_tem - 32) * 5/9-(100-x.max_hum)/5)-((x.min_tem - 32) * 5/9-(100-x.min_hum)/5))*1.8+32, axis = 1)
+    df_clean = (df
+                .copy()
+                .drop(['rfm','rfy', 'Date1','avg_bar','avg_win','avg_gus','avg_dir','max_rai','max_pre','min_pre','max_win','dif_p','max_gus','Date'], axis=1)
+                .dropna(axis=0)
+                .drop(df[df.Year == 2009].index)
+                .drop(df[df.Year == 2020].index)
+                .reset_index(drop=True)
+           )
+
     return df_clean
+
+def ridgeline(df,input_row,input_column):
+    '''
+    https://seaborn.pydata.org/examples/kde_ridgeplot.html
+    '''
+    
+    pal = sns.cubehelix_palette(10, rot=-.25, light=.7)
+    g = sns.FacetGrid(df, row=input_row, hue=input_row, aspect=15, height=.5, palette=pal)
+
+    # Draw the densities in a few steps
+    g.map(sns.kdeplot, input_column,
+          bw_adjust=.5, clip_on=False,
+          fill=True, alpha=1, linewidth=1.5)
+    g.map(sns.kdeplot, input_column, clip_on=False, color="w", lw=2, bw_adjust=.5)
+
+    # passing color=None to refline() uses the hue mapping
+    g.refline(y=0, linewidth=2, linestyle="-", color=None, clip_on=False)
+
+
+    # Define and use a simple function to label the plot in axes coordinates
+    def label(x, color, label):
+        ax = plt.gca()
+        ax.text(0, .2, label, fontweight="bold", color=color,
+                ha="left", va="center", transform=ax.transAxes)
+
+
+    g.map(label, input_column)
+
+    # Set the subplots to overlap
+    g.figure.subplots_adjust(hspace=-.25)
+
+    # Remove axes details that don't play well with overlap
+    g.set_titles("")
+    g.set(yticks=[], ylabel="")
+    g.despine(bottom=True, left=True)
