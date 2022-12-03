@@ -1,7 +1,7 @@
 # COSC 301 Project Group 29
 
 ## Introduction
-
+Climate change is a relevant and persistent issue for our generation and will continue to do so for many other generations if changes are not made. Information from news, articles, and social media permeates our daily lives regarding climate change and thus we wish to contribute to the every growing data surrounding climate change. To do so we chose weather data from Estes Park, Colorado to investigate the impact climate change has in the region, viability of renewable wind energy in the area, and the specific relationship between humidity and temperature.
 
 ---
 
