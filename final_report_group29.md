@@ -113,11 +113,12 @@ Average gustspeed, though has a similar standard deviation to average dewpoint, 
 
 *With most moderate dewpoint depression range and change, 2016 is, after analysis, the most pleasant year at the Park from 2010 to 2020.*
 
+*To find the full analysis, code and data for this section, [go notebook here](./notebooks/analysis1)*
+
 ## Question 2 + Results
 
  *We would like to analyze average wind speeds and direction to determine if renewable wind turbine energy would be effective and sustainable in the region where this data is collected. Reason for this question is to see if this particular renewable energy would be worth to try in this region to combat climate change and move away from fossil fuels. Inaddition, if wind turbines where installed, what direction should they face for maximize efficiency? What months would we see the most output and least?  Rainfall will also be examined to determine if this would be detrimental to the operation of any erected wind turbines.*
 
----
 
 ![](./images/Average%20Windspeed%20By%20Month.png)
 
@@ -134,8 +135,6 @@ Average gustspeed, though has a similar standard deviation to average dewpoint, 
 *Shown in purple, the distribution curve of averages from the same data used above confirms that it is as expected... the greatest distribution is below ~4mph. This may be detrimental to establishing wind turbines in this area as the minimum speed to generate electricity is ~7mph-9mph as stated previously. There appears to be some data indicating speeds of up to ~28 mph but those are clearer outliers. However, lets look at the mean of all the averages over the month over the data collection years (or in other words, averages of the averages of the months).
 Shown in green, this distribution curve looks a lot more promising! Here we can see that although the greatest density of recorded average windspeed is still ~4mph, we see that there is a second peak of distributions around ~8mph... sufficient to run a wind turbine.*
 
----
-
 ![](./images/Direction%20of%20Wind.png)
 ![](./images/compass.png)
 
@@ -143,7 +142,6 @@ Shown in green, this distribution curve looks a lot more promising! Here we can 
 
 *I was interested in what directions wind turbines should face if installed in the area. This is because there are two types of horizontal axis wind turbines: Upwind turbines that face into the wind (more common), and downwind turbines (rarer). To achieve optimal conditions, the rotor should be perpendicular to the wind direction(dtu.dk),  Here we see that the first cluster of wind direction come from heads between ~225 degrees to ~300 degrees. The second cluster we see (although significantly less prevalent that the first cluster) is at group between ~50 degrees to 125 degrees. The largest count from a wind direction is at ~285 degrees, while the least wind came from a ~165 degree direction. From these headings and the below compass image for reference, we can determine infer that the most of the wind comes from a westward direction blowing through to the east.*
 
----
 
 ![](./images/Rainfall%20Avg%20by%20Month.png)
 
@@ -157,9 +155,30 @@ Shown in green, this distribution curve looks a lot more promising! Here we can 
 
 *From Fig. 7 and Fig. 8 I determined that the average windspeed of ~8mph by month experienced by Estes Park was sufficient to sustain wind turbines. However, I acknowledge that the average may not justify the costs of installation and operations of wind turbines as the output would be only minimal. From Fig. 9 it was observed that the wind direction came mainly from a westward direction and therefore if wind turbines were installed, they should be facing west for optimal energy production. Fig. 10 shows that rainfall in the region is not relatively high to Kelowna and the most rainfall were in months outside of when average windspeed was highest and therefore would not interfere with wind turbine operation. In conclusion, as the world experiences increasing global climate change from fossil fuels and other other non-renewable energy sources, Etes Park, Colorado may benefit from hosting wind turbines to supplement their current hydroelectricity and perhaps sell surplus energy to other regions to combat climate change.*
 
+*To find the full analysis, code and data for this section, [go notebook here](./notebooks/analysis2)*
+
 ## Question 3 + Results
 
+**How is humidity related to temperature**
 
+*To answer this question, we used data from 2009, 2014, 2019 (increasing five by five years, total ten years) in Estes Park. We chose too use the average temperature and humidity because it is unpossible to tell how the maximum and minimum values are related to each other. And this is the reason we are searching this question.*
+
+*Firstly, let's see what the visuallized data shows us in a year. The visuallized data below shows how the average temperature and humidity goese separatly in January, April, August, and October in 2009. We picked a month from every season in the same year, to find if there will be a outstanding difference in different seasons.*
+
+![images_11](./images/January%20Daily%20Average%20Temperature%20and%20Humidity_2009.png)
+![images_12](./images/April%20Daily%20Average%20Temperature%20and%20Humidity_2009.png)
+![images_13](./images/August%20Daily%20Average%20Temperature%20and%20Humidity_2009.png)
+![images_14](./images/October%20Daily%20Average%20Temperature%20and%20Humidity_2009.png)
+
+*As we can see in the plots, the two values goes to the opposite way. Hence, there will be high possibility that when one of the value increased, the other one decreased. However, it is too soon to conclude the answer. Therefore, we visuallized the whole data in 2009, 2014, 2019. We picked three years, five years in between each year and total ten years across to make the conclusion more reliable. Down below are the plots for these three years.*
+![images_15](./images/Average%20Temperature%20vs.%20average%20humidity_2009.png)
+![images_16](./images/Average%20Temperature%20vs.%20average%20humidity_2014.png)
+![images_17](./images/Average%20Temperature%20vs.%20average%20humidity_2019.png)
+*By comparing these plots, we can discovered that the linear lines of the plots always go descending. Which means when the temperature incresed, the humidity decreased.*
+
+*After all, by comparing all the plots, we could find that all the plots tells us the temperature and humidity goes to the opposity direction. Hence, we can conclude that - when temperature increased, humidity decreased and vise versa.*
+
+*To find the full analysis, code and data for this section, [go notebook here](./notebooks/analysis3)*
 
 ---
 
