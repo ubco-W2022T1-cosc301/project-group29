@@ -22,6 +22,9 @@ I want to study if dewpoint are changing more drastically over years and see if 
 Now, I will start with more visualizations to get better understandings of this dataset. Start with plotting the correlation strength between weather parameters.
 
 ![](./images/a1_eda_heat.png)
+
+### Fig 1
+
 Correlations between temperature data and average dewpoint are 0.76 0.74 0.76, slighly higher than the correlations between humidity data and average dewpoint which are 0.4 0.52 0.14. It suggests that temperatures and humidities are all positively correlated to average dewpoints with temperatures having a stronger bond.
 
 Humidity in general have a weak negative correlation to temperature. As they all map to values of value from 0.13 to -0.48. This discripancy between the first and second observation might come as a result of season changinng.
@@ -29,6 +32,8 @@ Humidity in general have a weak negative correlation to temperature. As they all
 Average gustspeed, though has a similar standard deviation to average dewpoint, it merely has a similar flucation level. The correlation strength of it is very close to 0 for all cases with absolute value peaksed at 0.19, suggesting that this is an irrelevant variable in this analysis. I will leave it out from now on.
 
 ![](./images/a1_eda_pair.png)
+
+### Fig 2
 
 Temperatures are in degree fahrenheit, humidity is in %
 
@@ -47,7 +52,11 @@ I first filtered out all the rows where max humidty comes below 20% as mentioned
 - In which of the months is it happening?
 
 So that I can see if it if is happening yearly, or it may just be misrecorded data.
+
 ![](./images/a1_eda_catplot.png)
+
+### Fig 3
+
 We can see a huge group by blue dots at the bottom left corner. This means most of the "outliers" happens in 2009. As the quantity of data is distributed in a huge amount and spread evenly from 1 to 9 % in humidity and January to December in month. Additionally, max humidity below 10 is only happening for 2009 alone. I suspect this is falsely recorded data.
 
 If we count among the days where max_humdity falls below 20% to see if max humidity goes less than min humidity, 2009 shows up alone. As max humidity going below min humidity is impossible the values are outliers. For easier analysis of the data set, I will remove data in 2009 entirely to get rid of the outliers.
@@ -60,7 +69,7 @@ Concerned for weather changes, I picked a data set which records weather statist
 
 ![](./images/a1_t4_lmplot.png)
 
-### Fig 1
+### Fig 4
 
 This plot describes the Pair Wise Relationship between Dewpoint Depression and Average Humidity each Month at Estes Park, Colorado from 2010 to 2020. Columns are for average humidity in %, and rows are for dewpoint depression in F.
 
@@ -72,7 +81,7 @@ Hence, when humidity is low, the dewpoint depression gets high, then more coolin
 
 ![](./images/a1_t4_joint.png)
 
-### Fig 2
+### Fig 5
 
 This plot focus on the display bivariate and univariate relationships of Average Dewpoints (F) (column) and Range of Dewpoints (F) (row) at Estes Park, Colorado from 2010 to 2020.
 
@@ -84,7 +93,7 @@ Generally, higher average dewpoint correspond to higher range of dewpoint, and h
 
 ![](./images/a1_t4_ridge.png)
 
-### Fig 3
+### Fig 6
 
 The last plot describes Dewpoint Depressions Variations by Year at Estes Park, Colorado. 
 
