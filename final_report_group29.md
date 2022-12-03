@@ -7,7 +7,50 @@
 
 ## Exploratory Data Analysis
 
+Note that this data is from Estes Park, Colorado. So temperature higher in from June to August (summer) and lower in December to Feburary (winter). Dewpoint is strongly related to temperature and humidity according to NOAA's National Weather Services' definition. So I will focus on these values first.
 
+Reading from humidity values, we found that five number summary of avergae humidites are 9, 36, 47,61 and 94 percents, with maximum humidity median around 81 and miminum humidity median around 32, the data suggests that the park is relatively dry over the year. And maximum rainfall per minute is 0 throughout the year would suggest the same thing.
+
+Now if we read from average temperature, five number summary of it is -12.1, 33.7, 45.1, 58.0, 76.3 F. and maximum of temperature only 92.7 suggests that the park is relatively cold through out the year.
+
+Average dewpoint readings are -22.200, 12.100, 22.500, 35.4000, and 55.100, all approximately 10 F below temperature readings with the highest difference at about 20 F at lower quartile. It is unlikely for it to happen in winter when the temperature is lowest, I assume that there is a humidity drop with respect to temperature before or after winter.
+
+By how the dewpoints are defined, humidity and temperature are relevent to dewpoints. So as intended, the standard deviation of those three are very close: 14.634088, 15.326793, and 17.438153 respectively. It is very interesting though, reading from the standard deviations from the average gustspeed, it is 14.117446, which is even closer to dewpoint's std.
+
+I want to study if dewpoint are changing more drastically over years and see if there are explanations for it. So I will leave out less relevant datas from now on and keep average gustspeed in just in case for reasons mentioned above.
+
+Now, I will start with more visualizations to get better understandings of this dataset. Start with plotting the correlation strength between weather parameters.
+
+![](./images/a1_eda_heat.png)
+Correlations between temperature data and average dewpoint are 0.76 0.74 0.76, slighly higher than the correlations between humidity data and average dewpoint which are 0.4 0.52 0.14. It suggests that temperatures and humidities are all positively correlated to average dewpoints with temperatures having a stronger bond.
+
+Humidity in general have a weak negative correlation to temperature. As they all map to values of value from 0.13 to -0.48. This discripancy between the first and second observation might come as a result of season changinng.
+
+Average gustspeed, though has a similar standard deviation to average dewpoint, it merely has a similar flucation level. The correlation strength of it is very close to 0 for all cases with absolute value peaksed at 0.19, suggesting that this is an irrelevant variable in this analysis. I will leave it out from now on.
+
+![](./images/a1_eda_pair.png)
+
+Temperatures are in degree fahrenheit, humidity is in %
+
+Reading from the diagonal, from top left to bottom right, we can see that temperatures first. They are changing over month, the distributions are all very close to normal distribution in each month. The minimum and maximum are all relatively close to average. In Feburary, teperature are centered around 25 F, in June, temperautre peaks at around 60 F. In December, temperature falls back to around 25 F. On the other hand, the reading on humidity are very different. Humidity distributions are relatively close to each other over different months. Average humidity is close to normal distribution with mode close to 50. Max humidity is left skewed with mode aroound 90. Min humidity is right skewed with mode around 20. 
+
+With the information above, we can tell roughly how weather is in Estes Park, Colorado: in a single day, temperature is relatively consistent. In different months, temperature would be higher at summer at around 60 F and around 25 F at winter. Humidity would normally peak around 90 and gets as low as 20 in all days.
+
+The findings are consistent with the pair wise graph for average humidity and average temperature at the row 4 column 1. In June (summer) the readings of temperature are high at around 60 F and in December (winter) the readings of temperature are lowat around 20F. In all month, humidity readings distributes most closely at the middle at around 50 and spreads evenly to 0 and 100.
+
+Reading from avgerate dewpoints, we can see that it gets higher in summer at around 30 F and lower at winter at around 10 F. Distribution changes along season like temperature does. The size of one standard deviations are very close to each other over different months, this is similar to the behavior average humidity (whereas it is different for temperature).
+
+One concerning finding is that in the graphs related to maximum humidity, the values falls below 10 only in Feburary for a small group of data. I am assuming it is either due to recording error, or there was a severe weather took place one year during 2008 to 2020 at the park. I will look into this.
+
+I first filtered out all the rows where max humidty comes below 20% as mentioned above. Next I plot them in a catplot where x axis is humidity, y axis is month, colored by year to see two things: 
+- In which of the years is it happening?
+- In which of the months is it happening?
+
+So that I can see if it if is happening yearly, or it may just be misrecorded data.
+![](./images/a1_eda_catplot.png)
+We can see a huge group by blue dots at the bottom left corner. This means most of the "outliers" happens in 2009. As the quantity of data is distributed in a huge amount and spread evenly from 1 to 9 % in humidity and January to December in month. Additionally, max humidity below 10 is only happening for 2009 alone. I suspect this is falsely recorded data.
+
+If we count among the days where max_humdity falls below 20% to see if max humidity goes less than min humidity, 2009 shows up alone. As max humidity going below min humidity is impossible the values are outliers. For easier analysis of the data set, I will remove data in 2009 entirely to get rid of the outliers.
 
 ---
 
