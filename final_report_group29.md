@@ -45,6 +45,8 @@ By comparing these plots, we can discovered that the linear lines of the plots a
 
 After all, by comparing all the plots, we could find that all the plots tells us the temperature and humidity goes to the opposity direction. Hence, we can conclude that - when temperature increased, humidity decreased and vise versa.
 
+To find the full analysis, code and data, [go notebook here](./notebooks/analysis3)
+
 ---
 
 ## Conclusion
