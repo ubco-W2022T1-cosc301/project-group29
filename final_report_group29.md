@@ -59,3 +59,7 @@ Shown in green, this distribution curve looks a lot more promising! Here we can 
 ---
 
 ## Conclusion
+
+
+
+*From Fig. 7 and Fig. 8 we can conclude that the average windspeed of ~8mph by month experienced by Estes Park is sufficent to sustain wind turbines. However, we acknowledge that the average may not justify the costs of installation and operations of wind turbines as the output would be only minimal. From Fig. 9 it was observed that the wind direction came mainly from a westward direction and therefore if wind turbines were installed, they should be facing west for optimal energy production. Fig. 10 shows that rainfall in the region is not relatively high to Kelowna and that most rainfall were in months outside of when average windspeed was highest and therefore would not interfere with wind turbine operation. In conclusion, as the world experiences increasing global climate change from fossil fuels and other other non-renewable energy sources, Etes Park, Colorado *may* benefit from hosting wind turbines to supplement their current hydroelectricity and perhaps sell surplus energy to other regions to combat climate change.*
