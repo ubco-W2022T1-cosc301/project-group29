@@ -170,8 +170,6 @@ Shown in green, this distribution curve looks a lot more promising! Here we can 
 ![images_13](./images/August%20Daily%20Average%20Temperature%20and%20Humidity_2009.png)
 ![images_14](./images/October%20Daily%20Average%20Temperature%20and%20Humidity_2009.png)
 
-
-*As we can see in the plots, the two values goes to the opposite way. Hence, there will be high possibility that when one of the value increased, the other one decreased. However, it is too soon to conclude the answer. Therefore, we visuallized the whole data in 2009, 2014, 2019. We picked three years, five years in between each year and total ten years across to make the conclusion more reliable. Down below are the plots for these three years.*
 ![images_15](./images/Average%20Temperature%20vs.%20average%20humidity_2009.png)
 ![images_16](./images/Average%20Temperature%20vs.%20average%20humidity_2014.png)
 ![images_17](./images/Average%20Temperature%20vs.%20average%20humidity_2019.png)
