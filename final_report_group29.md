@@ -159,7 +159,7 @@ Shown in green, this distribution curve looks a lot more promising! Here we can 
 
 ## Question 3 + Results
 
-**How is humidity related to temperature**
+**We are wondering is there a significantly visuable relation between humidity and temperature. We usually feel it is wetter in a hot day than in a cold one. Is it true or it is just our illusion? Hence, we want to find if the humidity is related to temperature and how they are related to.**
 
 *To answer this question, we used data from 2009, 2014, 2019 (increasing five by five years, total ten years) in Estes Park. We chose too use the average temperature and humidity because it is unpossible to tell how the maximum and minimum values are related to each other. And this is the reason we are searching this question.*
 
@@ -169,6 +169,7 @@ Shown in green, this distribution curve looks a lot more promising! Here we can 
 ![images_12](./images/April%20Daily%20Average%20Temperature%20and%20Humidity_2009.png)
 ![images_13](./images/August%20Daily%20Average%20Temperature%20and%20Humidity_2009.png)
 ![images_14](./images/October%20Daily%20Average%20Temperature%20and%20Humidity_2009.png)
+
 
 *As we can see in the plots, the two values goes to the opposite way. Hence, there will be high possibility that when one of the value increased, the other one decreased. However, it is too soon to conclude the answer. Therefore, we visuallized the whole data in 2009, 2014, 2019. We picked three years, five years in between each year and total ten years across to make the conclusion more reliable. Down below are the plots for these three years.*
 ![images_15](./images/Average%20Temperature%20vs.%20average%20humidity_2009.png)
@@ -187,3 +188,5 @@ Shown in green, this distribution curve looks a lot more promising! Here we can 
 *From data from Research Question 1, we determined that the most drastic changes of dewpoints show up in summer from analyzing average dewpoint readings recorded at Estes Park, Colorado, 2010 to 2019. Therefore, the Etes Park mostly to experiences severe weather during that season. When looking at year-based weather pleasantness, the most consistent distribution of dewpoint depression month wise shows up in 2016. Hence, that year has been studied and shown to be the most comfortable one in that region.*
 
 *From the data above in Research Question 2, we are able to conclude that average windspeeds would be sufficient to produce energy in the region and turbine operations would not be directly hindered significantly from average precipitation in the area; although granted energy output would not be robust. Additionally, we were able to conclude that if installed, wind turbines should face a westward direction for optimal energy production as this is were the majority of wind came from.*
+
+*From data from Research Question 3, we discovered that the average humidity is highly related to the average temperature. The average humidity increased as the average temperature decreased. Hence, colder at Estes Park, Colorado, wetter there will be. Although there could be several days that go to the opposite way, this conclusion is able to suit nearly all days and years at Estes Park.*
