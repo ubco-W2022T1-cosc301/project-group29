@@ -163,20 +163,27 @@ Shown in green, this distribution curve looks a lot more promising! Here we can 
 
 *To answer this question, we used data from 2009, 2014, 2019 (increasing five by five years, total ten years) in Estes Park. We chose too use the average temperature and humidity because it is unpossible to tell how the maximum and minimum values are related to each other. And this is the reason we are searching this question.*
 
-*Firstly, let's see what the visuallized data shows us in a year. The visuallized data below shows how the average temperature and humidity goese separatly in January, April, August, and October in 2009. We picked a month from every season in the same year, to find if there will be a outstanding difference in different seasons.*
+*Firstly, let's see what the visuallized data shows us in a year. The visuallized data below shows how the average temperature and humidity goese separatly in January, April, August, and October in 2009 (see Figure 11 to 14). We picked a month from every season in the same year, to find if there will be a outstanding difference in different seasons.*
 
 ![images_11](./images/January%20Daily%20Average%20Temperature%20and%20Humidity_2009.png)
+### **Figure 11**
 ![images_12](./images/April%20Daily%20Average%20Temperature%20and%20Humidity_2009.png)
+### **Figure 12**
 ![images_13](./images/August%20Daily%20Average%20Temperature%20and%20Humidity_2009.png)
+### **Figure 13**
 ![images_14](./images/October%20Daily%20Average%20Temperature%20and%20Humidity_2009.png)
+### **Figure 14**
 
-*As we can see in the plots, the two values goes to the opposite way. Hence, there will be high possibility that when one of the value increased, the other one decreased. However, it is too soon to conclude the answer. Therefore, we visuallized the whole data in 2009, 2014, 2019. We picked three years, five years in between each year and total ten years across to make the conclusion more reliable. Down below are the plots for these three years.*
+*The blue line in the plots shows the average temperature and the orange line represents the average humidity. We are going to have a simple obseravtion and a not really preciseness conclusion finding whether the lines always run to the same direction. As we can see in the plots, the two values goes to the opposite way. Hence, there will be high possibility that when one of the value increased, the other one decreased. However, it is too soon to conclude the answer. Therefore, we visuallized the whole data in 2009, 2014, 2019. We picked three years, five years in between each year and total ten years across to make the conclusion more reliable. Down below are the plots for these three years.*
 ![images_15](./images/Average%20Temperature%20vs.%20average%20humidity_2009.png)
+### **Figure 15**
 ![images_16](./images/Average%20Temperature%20vs.%20average%20humidity_2014.png)
+### **Figure 16**
 ![images_17](./images/Average%20Temperature%20vs.%20average%20humidity_2019.png)
-*By comparing these plots, we can discovered that the linear lines of the plots always go descending. Which means when the temperature incresed, the humidity decreased.*
+### **Figure 17**
+*The dots in the plots shows what will the average humidity will be in a certain average temperature. The linear line represents the overall trend of this relation. By comparing these plots, we can discovered that the linear lines of the plots always go descending. Which means when the temperature incresed, the humidity decreased.*
 
-*After all, by comparing all the plots, we could find that all the plots tells us the temperature and humidity goes to the opposity direction. Hence, we can conclude that - when temperature increased, humidity decreased and vise versa.*
+*For conclusion, by observing, comparing and concluding all the plots, we could find that all the plots tells us the average temperature and average humidity goes to the opposity direction. Hence, we can conclude that - when the average temperature increased, average humidity decreased and vise versa.*
 
 *To find the full analysis, code and data for this section, [go notebook here](./notebooks/analysis3)*
 
@@ -187,3 +194,5 @@ Shown in green, this distribution curve looks a lot more promising! Here we can 
 *From data from Research Question 1, we determined that the most drastic changes of dewpoints show up in summer from analyzing average dewpoint readings recorded at Estes Park, Colorado, 2010 to 2019. Therefore, the Etes Park mostly to experiences severe weather during that season. When looking at year-based weather pleasantness, the most consistent distribution of dewpoint depression month wise shows up in 2016. Hence, that year has been studied and shown to be the most comfortable one in that region.*
 
 *From the data above in Research Question 2, we are able to conclude that average windspeeds would be sufficient to produce energy in the region and turbine operations would not be directly hindered significantly from average precipitation in the area; although granted energy output would not be robust. Additionally, we were able to conclude that if installed, wind turbines should face a westward direction for optimal energy production as this is were the majority of wind came from.*
+
+*From data from Research Question 3, we discovered that the average humidity is highly related to the average temperature. The average humidity increased as the average temperature decreased. Hence, colder at Estes Park, Colorado, wetter there will be. Although there could be several days that go to the opposite way, this conclusion is able to suit nearly all days and years at Estes Park.*
